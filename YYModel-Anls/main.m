@@ -7,11 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+@interface NSObject (Sark)
++ (void)foo;
+@end
+@implementation NSObject (Sark)
++ (void)foo
+{
+    NSLog(@"IMP: -[NSObject(Sark) foo]");
+}
+@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        // 用clang -rewrite-objc main.m 后，以下的对应C++语句
+        // ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("foo"));
+        [NSObject foo];
     }
     return 0;
 }
