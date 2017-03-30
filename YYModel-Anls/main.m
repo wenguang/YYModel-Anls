@@ -29,6 +29,13 @@ int main(int argc, const char * argv[]) {
         [NSObject foo];
         ((void (*)(id, SEL))objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("foo"));
         ((void (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("foo"));
+        
+        
+        //位运算
+        NSUInteger q = 0;
+        NSUInteger c = 1 << 8;  // c equals 0x0100 256
+        q |= c; // equals q = 0x0000 | 0x0100;
+        NSLog(@"%lu", (unsigned long)c);
     }
     return 0;
 }
