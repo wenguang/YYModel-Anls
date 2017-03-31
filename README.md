@@ -91,3 +91,23 @@ qualifier |= YYEncodingTypeQualifierConst;
 
 [二、八、十、十六进制转换（图解篇）](http://www.cnblogs.com/gaizai/p/4233780.html)
 
+
+
+7、搞懂property_getAttributes返回值的含义
+
+```objective-c
+// 结合Model.h main.m 输出
+```
+
+[Type Encodings](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html)
+
+
+
+8、NSScanner的用法
+
+[NSScanner使用详解](http://www.jianshu.com/p/dee32c7401e1)
+
+
+
+9、流程图
+

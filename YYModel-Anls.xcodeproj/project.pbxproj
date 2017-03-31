@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C37F0C622A69491A20B4305 /* libPods-YYModel-Anls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC7D011F09A1132C19EC4CA /* libPods-YYModel-Anls.a */; };
 		A871D4D81E8A4999008A9E28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A871D4D71E8A4999008A9E28 /* main.m */; };
+		A871D4E21E8CF85F008A9E28 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = A871D4E11E8CF85F008A9E28 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,8 @@
 		3A820AD9F8958A3DFB0300A0 /* Pods-YYModel-Anls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYModel-Anls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYModel-Anls/Pods-YYModel-Anls.debug.xcconfig"; sourceTree = "<group>"; };
 		A871D4D41E8A4999008A9E28 /* YYModel-Anls */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "YYModel-Anls"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A871D4D71E8A4999008A9E28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A871D4E01E8CF85F008A9E28 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		A871D4E11E8CF85F008A9E28 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		C52B33694A26FDC493F48F40 /* Pods-YYModel-Anls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYModel-Anls.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYModel-Anls/Pods-YYModel-Anls.release.xcconfig"; sourceTree = "<group>"; };
 		FDC7D011F09A1132C19EC4CA /* libPods-YYModel-Anls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYModel-Anls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				A871D4D71E8A4999008A9E28 /* main.m */,
+				A871D4E01E8CF85F008A9E28 /* Model.h */,
+				A871D4E11E8CF85F008A9E28 /* Model.m */,
 			);
 			path = "YYModel-Anls";
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A871D4D81E8A4999008A9E28 /* main.m in Sources */,
+				A871D4E21E8CF85F008A9E28 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
