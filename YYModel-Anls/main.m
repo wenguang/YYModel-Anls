@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/message.h>
+#import "Model.h"
 
 @interface NSObject (Sark)
 + (void)foo;
@@ -36,6 +37,23 @@ int main(int argc, const char * argv[]) {
         NSUInteger c = 1 << 8;  // c equals 0x0100 256
         q |= c; // equals q = 0x0000 | 0x0100;
         NSLog(@"%lu", (unsigned long)c);
+        
+        //类型编码
+        // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+        unsigned int count;
+        objc_property_t *properties = class_copyPropertyList([Model class], &count);
+        for (int i=0; i<count; i++) {
+            objc_property_t property = properties[i];
+            const char *name = property_getName(property);
+            const char *typeEncoding = property_getAttributes(property);
+            NSLog(@"%@ : %@", [NSString stringWithCString:name encoding:NSUTF8StringEncoding], [NSString stringWithCString:typeEncoding encoding:NSUTF8StringEncoding]);
+            
+            unsigned int ac;
+            objc_property_attribute_t *attributes = property_copyAttributeList(property, &ac);
+            for (int j=0; j<ac; j++) {
+                NSLog(@"%s : %s", attributes[j].name, attributes[j].value);
+            }
+        }
     }
     return 0;
 }
